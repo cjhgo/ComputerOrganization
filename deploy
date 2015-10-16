@@ -1,0 +1,20 @@
+#!/bin/bash
+result=${PWD##*/};
+cp -r ~/csky/${result}/*  ~/cjhgosina/cs/${result}
+
+cd ~/cjhgosina/cs/${result}/
+
+# rm *.md
+
+
+
+# cd ~/cjhgosina
+
+
+# git add *
+# git commit -m "update from ${result}"
+# git push sae master:1
+
+cd ~/csky/${result}/
+git add *
+git commit -m "update ${result} note"
