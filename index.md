@@ -5,7 +5,7 @@ viewport:width=device-width,initial-scale=1
 [TOC]
 
 #计算机组成原理
-##第一篇:概论
+##第一篇:[概论][0]
 ##第二篇:硬件结构
 ###系统总线
 ###存储器
@@ -16,3 +16,5 @@ viewport:width=device-width,initial-scale=1
 ##控制单元
 ###控制单元的功能
 ###控制单元的设计
+
+[0]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/Ch1计算机系统概论.html
