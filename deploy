@@ -1,6 +1,6 @@
 #!/bin/bash
 result=${PWD##*/};
-cp -r ~/csky/${result}/*  ~/cjhgosina/cs/${result}
+cp -r ~/csky/${result}/*  ~/cjhgosina/cs/${result}/
 
 cd ~/cjhgosina/cs/${result}/
 
