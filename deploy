@@ -1,19 +1,22 @@
 #!/bin/bash
 result=${PWD##*/};
+
+mkdir ~/cjhgosina/CS/${result}
+
 cp -r ~/csky/${result}/*  ~/cjhgosina/CS/${result}/
 
 cd ~/cjhgosina/cs/${result}/
 
 rm *.md
+rm deploy
 
 
+cd ~/cjhgosina
 
-# cd ~/cjhgosina
 
-
-# git add *
-# git commit -m "update from ${result}"
-# git push sae master:1
+git add *
+git commit -m "update from ${result}"
+git push sae master:1
 
 cd ~/csky/${result}/
 git add *
