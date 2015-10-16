@@ -4,7 +4,7 @@ cp -r ~/csky/${result}/*  ~/cjhgosina/CS/${result}/
 
 cd ~/cjhgosina/cs/${result}/
 
-# rm *.md
+rm *.md
 
 
 
