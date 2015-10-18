@@ -52,7 +52,7 @@ viewport:width=device-width,initial-scale=1
 
 **典型的冯诺依曼计算机以运算器为中心,现代的计算机以存储器为中心**
 
-$$
+<!-- $$
 \begin{equation}
 	计算机的硬件框图:
 	\begin{cases}
@@ -73,6 +73,33 @@ $$
 		输出设备
 		\end{cases}
 		&\text{I/O设备,外设设备}
+	\end{cases}
+\end{equation}
+$$
+ -->
+$$
+\begin{equation}
+	计算机的硬件框图:
+	\begin{cases}
+		\text{主机}
+		\begin{cases}
+			\text{MM(Main Memory)}
+			\begin{cases}
+				主存储器\\\
+			\end{cases}
+			\\\
+			\text{CPU}
+			\begin{cases}
+			运算器\\\
+			控制器
+			\end{cases}
+		\end{cases}
+		\\\
+		\text{I/O设备,外设}
+		\begin{cases}
+		输入设备\\\
+		输出设备
+		\end{cases}
 	\end{cases}
 \end{equation}
 $$
