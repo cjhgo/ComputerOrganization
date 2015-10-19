@@ -124,9 +124,8 @@ $SRAM,DRAM,ROM$
 ($记存取周期为T,总线传输周期为\tau$)
 
 ![四体低位交叉编址存储器流水线工作示意图][0]
-[0]:http://cjhgo.sinaapp.com/CS/Computer_Organization/images/fourbodyaddress.gif
-四体低位交叉编址存储器流水线工作示意图
-文字说明
+[0]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/fourbodyaddress.gif
+**文字说明**
 $
 在t=0时,启动第i个体,\\\
 在t=\tau时启动第i+1个体\\\
@@ -144,3 +143,5 @@ $
 + $n体并行系统,连续读取n个字所需时间t_1=T+(n-1)\tau$
 	- 我所理解的是,这个读取是指从内存中读出放到总线上,因为最后一个若要送到CPU还有在经历一个总线传输周期
 + $T=n\tau,:因为连续读取时,两次读取第i个体之间相隔了n\tau的时间$
+
+对于高位交叉编址存储器,连续读取n个字,没读一个字都要等待上一个字,所以所需时间$t_2=nT$
