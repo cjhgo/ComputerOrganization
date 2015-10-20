@@ -240,7 +240,9 @@ $i=j\quad mod \quad Q$
 + Fully Associative Cache
 ![FullyAssociativeCache][2]
 [2]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/FullyAssociativeCache.gif
-+ 
++ Set Associative Cache
+![SetAssociativeCache][3]
+[3]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/SetAssociativeCache.gif
 ####替换策略
 
 
