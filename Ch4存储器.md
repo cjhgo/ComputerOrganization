@@ -162,4 +162,41 @@ $
 **为了避免CPU和i/o设备争抢访存,可在CPU和主存之间加一级缓存**
 程序访问的局部性原理
 (一般cache采用SRAM制作)
-####cache的工作原理(包含映射和替换策略)
+
+**cpu和cache之间一次传送一个字,cache和主存之间一次传送一个字块**
+####cache的工作原理
++ 主存和cache分成大小相同的块;每个块有各自的块号
+	- (从0开始编号)
++ 主存容量大块数多,cache容量小块数少;映射:根据主存地址得到cache地址
+	- $主存块号m位,块数:2^m=M;cache块号c位,块数2^c=C;\\\
+	块内字数B=2^b,块长;$
++ 访存时
+	- 地址映射变换
+		- 命中:所需的字已在cache之中
+			+ 读:直接访问cache,将所需的字送入CPU
+			+ 写
+				- 写直达法
+				- 写回法
+		- 不命中:所需的字不在cache之中
+			+ 读写也有不同,,,详见具体介绍
+			+ cache未满:调入cache
+			+ cache已满:替换cache
+				- 替换策略
+					+ FIFO
+					+ LRU
+					+ 随机法
++ 衡量cache的效率
+	- 命中率:$h=\frac{N_c}{N_c+N_m}$
+	- 平均访问时间:$t_a=ht_c+(1-h)t_m$
+	- 访问效率:$e=\frac{t_c}{t_a}\times 100\%$
+	- 影响因素,,,,?????曲线关系
+		+ 块长
+		+ 容量
+	
+
+**cache读写操作**
+
++ 读
+![s][1]
+[1]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/cacheread.gif
+(包含映射和替换策略)
