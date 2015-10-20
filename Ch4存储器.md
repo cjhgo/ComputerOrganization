@@ -237,12 +237,14 @@ $i=j\quad mod \quad Q$
 #####地址格式
 
 + Direct Mapped Cache
+![DirectMappedCache][2]
+[2]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/DirectMappedCache.gif
 + Fully Associative Cache
-![FullyAssociativeCache][2]
-[2]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/FullyAssociativeCache.gif
+![FullyAssociativeCache][3]
+[3]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/FullyAssociativeCache.gif
 + Set Associative Cache
-![SetAssociativeCache][3]
-[3]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/SetAssociativeCache.gif
+![SetAssociativeCache][4]
+[4]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/SetAssociativeCache.gif
 ####替换策略
 
 
