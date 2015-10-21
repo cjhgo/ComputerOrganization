@@ -246,5 +246,6 @@ $i=j\quad mod \quad Q$
 ![SetAssociativeCache][4]
 [4]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/SetAssociativeCache.gif
 ####替换策略
-
+详见操作系统
+###4.辅存
 
