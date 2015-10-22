@@ -1,0 +1,7 @@
+#!/bin/bash
+result=${PWD##*/};
+
+
+cd ~/csky/${result}/
+git add *
+git commit -m "update ${result} note"
