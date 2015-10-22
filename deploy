@@ -9,6 +9,7 @@ cd ~/cjhgosina/cs/${result}/
 
 rm *.md
 rm deploy
+rm temp
 
 
 cd ~/cjhgosina
