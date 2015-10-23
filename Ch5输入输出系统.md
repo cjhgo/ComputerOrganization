@@ -85,7 +85,6 @@ viewport:width=device-width,initial-scale=1
 
 + 输出$\quad cpu\rightarrow i/o接口 \rightarrow i/o设备$
 + 输入$\quad cpu\leftarrow i/o接口 \leftarrow i/o设备$
-l
 
 ###5.程序中断方式
 **主要介绍i/o中断处理的相关内容**
@@ -119,8 +118,24 @@ l
 	+ 硬件方法:硬件排队器(链式排队器)
 		- 在cpu内部设置一个统一的排队器
 		![cpu内的链式排队器][1]
+		排队原理:
+		$INTP_i=\overline{INTP_0}\cdot\overline{INTP_1}\cdots\overline{INTP_{i-1}}\cdot INTR_i\\\
+		=\overline{(INTP_{0}+INTP_{1}+\cdots+INTP_{i-1})}\cdot INTR_i,记为\overline{A}\cdot INTR_i\\\
+		可见,欲使排队器输出端第i级输出为1,当且仅当A=0\&INTR_i=1,\\\
+		A=0,即比第i级高的排队器输出端皆为0,\\\
+		反之,只要第i级排队器输出端为1,则\\\
+		比第i级优先级级别低的i+1,i+2...级输出皆为0$
 		- 在接口电路内分别设置各个设备的排队器
 		![分设的链式排队器][2]
+		排队原理:
+		$INTP_i=INTR_i\cdot INTP_i'\\\
+		INTP_i'=\overline{INTR_{i-1}}\cdot NTP_{i-1}' (i>1,INTP_1'=1)\\\
+		INTP_i=\overline{(INTR_0+INTR_1+\cdots+INTR_{i-1})}\cdot INTR_i\cdot INTP_1'\\\
+		记为\overline{B}\cdot INTR_i \cdot 1\\\
+		可见,欲使排队器输出端第i级输出为1,当且仅当B=0\&INTR_i=1,\\\
+		B=0,即比第i级高的设备的中断请求输出皆为0,\\\
+		反之,只要第i级有中断请求输出,则\\\
+		比第i级优先级级别低的i+1,i+2...级排队输出皆为0$
 [1]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/chainqueueofcpu.gif
 [2]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/chainqueue.gif
 #####中断向量地址形成部件(设备编码器)
@@ -134,13 +149,13 @@ l
 			- 分散设置在各个接口电路中
 			- 放置在cpu内部
 		+ 由向量地址寻找中断服务程序入口地址通常也采用两种放法
-			- 向量地址内存存放一条无条件转义指令,向量地址送PC
-			- 向量地址内存存放入口地址(**设置向量地址表**),访存得打入口地址
+			- 向量地址内存存放一条无条件转义指令(**向量地址转移**),向量地址送PC
+				+ 据白中英说:这种方法允许中断处理程序放在内存中的任何地方,非常灵活
+			- 向量地址内存存放入口地址(**设置向量地址表**),访存得到入口地址
 			**区别在于一个放的是指令,一个放的是地址**
 	+ 分清**向量地址**和中断服务程序入口地址**的区别
-#####电路图
-
-4. 电路图
+#####程序中断接口电路基本组成
+电路图
 ![补图][图5.41]
 ####i/o中断处理过程
 中断请求,中断判优

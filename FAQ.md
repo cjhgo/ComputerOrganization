@@ -37,3 +37,4 @@ viewport:width=device-width,initial-scale=1
 	- cpu有一个允许中断触发器EINT,控制cpu是否响应中断
 		+ 对应cpu响应i/o设备提出中断请求的条件;
 			- cpu的中断允许触发器EINT为1(中断开)
++ 向量地址转移,灵活到哪去了,???			
