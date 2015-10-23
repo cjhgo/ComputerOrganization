@@ -105,7 +105,9 @@ l
 			+ 设备就绪,即完成触发器为1
 			+ 没有被屏蔽,
 ![接口发出中断请求的条件][0]		
-[0]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/intr.gif
+[0]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/INTR.gif
+解读:在<u>设备就绪</u>且<u>没有被屏蔽</u>的情况下,当cpu的中断查询信号传来时,接口发出了中断请求信号
+(这个信号输出到排队器里边去,参与排队)
 2. 排队器:多个中断源同时提出请求时,按优先级高低给予响应,**速度越高优先级越高**
 (因为如果不及时响应速度高的设备,它的信息可能会立即消失)
 优先权处理可用硬件方法,软件方法,
@@ -114,7 +116,8 @@ l
 		- 在cpu内部设置一个统一的排队器
 		![补图][图8.25]
 		- 在接口电路内分别设置各个设备的排队器
-		![补图][图5.38]
+		![分设的链式排队器][2]
+[2]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/chainqueue.gif
 3. 中断向量地址形成部件(设备编码器)
 响应中断就要去执行对应的中断服务程序.cpu如何找到中断服务程序的入口地址,?
 	+ 软件查询法:
