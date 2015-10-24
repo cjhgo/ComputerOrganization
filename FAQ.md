@@ -52,3 +52,6 @@ viewport:width=device-width,initial-scale=1
 			- 采用dma相当于cpu权力下放,由dma处理每传完一次要处理的改内存,改计数器这些事情
 			cpu可以继续原程序
 			- 这样,自然,dma方式要比中断效率高
+			可以通过课本P
++ dma是cpu响应请求,中断是cpu查询请求,???,
+	- 回答,都要看cpu检测/查询			
