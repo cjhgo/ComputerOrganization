@@ -352,7 +352,9 @@ viewport:width=device-width,initial-scale=1
 	+ 关中断:为确保,不被干扰,
 	**中断周期内自动关闭中断**以禁止CPU再次响应新的中断请求
 	硬件关中断/CPU硬件自动复位/CPU自动关中断
-
+硬件关中断示意图	
+![硬件关中断示意图][5]
+[5]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/autoeint.gif
 #####保护现场和恢复现场
 保护现场有两方面,分别由中断隐指令和中断服务程序完成
 恢复现场由中断服务程序完成
@@ -366,8 +368,10 @@ viewport:width=device-width,initial-scale=1
 	**不具有屏蔽功能的排队器,保护现场后开了中断,则只要有中断在此请求,cpu就会响应**
 	**这样<u>无论级别高低,是个中断请求就能中断当前的中断服务程序</u>**
 	**所以,为排队器加上屏蔽功能,使级别低的中断请求无法中断当前中断服务,级别高的中断请求则可以**
-![单重与多重中断流程图][3]
-[3]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/interruptflow.gif
+单重与多重中断流程图_____________采用屏蔽技术的中断服务程序
+![单重与多重中断流程图][3]![采用屏蔽技术的中断服务程序][6]
+[3]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/interrupt_flow.gif
+[6]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/maskword.gif
 ####中断屏蔽技术(详解)
 
 + 排队器解决多个中断源同时请求时按优先级响应的问题:*优先级问题*
