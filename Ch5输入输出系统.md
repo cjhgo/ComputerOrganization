@@ -137,6 +137,10 @@ viewport:width=device-width,initial-scale=1
 		B=0,即比第i级高的设备的中断请求输出皆为0,\\\
 		反之,只要第i级有中断请求输出,则\\\
 		比第i级优先级级别低的i+1,i+2...级排队输出皆为0$
+		电路说明:
+		排队器的下边,只能处理使低级中断请求,优先级高的即使没有中断请求,$INTP_i`也会输出1$
+		所以加上上边的与非门,反相器,使得高级别但没有请求的输出为0
+		最终使得,只有级别最高的请求输出为1,其他(级别低的无论有无请求,级别高且没有请求的)皆为0
 [1]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/chainqueueofcpu.gif
 [2]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/chainqueue.gif
 #####中断向量地址形成部件(设备编码器)
