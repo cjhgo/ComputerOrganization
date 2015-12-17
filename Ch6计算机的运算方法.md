@@ -7,6 +7,27 @@ viewport:width=device-width,initial-scale=1
 ##Ch6计算机的运算方法
 ###无符号数和有符号数
 ###数的定点表示和浮点表示
+在计算机中,小数点不用专门的器件表示,而是按照约定的方式标出
+共有两种方法表示小数点的存在,即定点表示和浮点表示
+####定点表示
++ 纯小数:小数点位于数符位和第一数值位之间
++ 纯整数:小数点位于数值位之后
+
+处理非纯小数
+处理非纯整数
+都要乘上一个比例因子
+####浮点表示
+$$N=S \times r^j\\\
+S:尾数,决定了表示精度\\\
+r:基数\\\
+j:阶码,决定了表示范围$$
+
++ 为了提高数据精度,以及便于浮点数的比较
+规定**<u>浮点数的尾数用纯小数形式</u>**
++ **<u>规格化数:尾数最高位为1的浮点数</u>**
+浮点数表示成规格化形式后,精度最高
+#####浮点数的表示形式
+
 ###定点运算
 ###浮点四则运算
 ###算术逻辑单元
@@ -26,3 +47,5 @@ https://www.ics.uci.edu/~eppstein/161/960227.html
 https://www.baidu.com/s?wd=%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B%E5%86%8D%E6%95%A3%E5%88%97%E6%B3%95%20%E6%9F%A5%E6%89%BE%E5%A4%B1%E8%B4%A5&rsv_spt=1&rsv_iqid=0xdcdfaf9100023aa7&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=31&rsv_sug1=17&sug=%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B%E5%86%8D%E6%95%A3%E5%88%97%E6%B3%95&rsv_n=1&rsv_t=af664Tpw7e%2Fy%2F9ProyMdLm3oRmdBPbz7RtggOWpIkwPGbu9hTq4rNPoIuANECfyUlEj3&rsv_sug2=0&inputT=13206&rsv_sug4=13206
 
 http://www.cskaoyan.com/thread-160179-1-1.html
+
+[0]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/floatpoint.gif
