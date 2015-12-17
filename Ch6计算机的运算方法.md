@@ -70,7 +70,35 @@ j:阶码,决定了表示范围$$
 	$0.1000\cdots \times 2^{-Max_{阶码}} = ...$
 	最大负数相应变化,最大正数和最小负数不变
 ####定点数和浮点数的比较
+![floatsample][1]
+$$阶符,阶码数值部分;数符.尾数数值部分$$
+**十进制分数怎样化成二进制小数,快速**
+$ \frac{53}{512},并不能主观的看出来\\\
+要义:\times \frac{256}{256},256怎样来的,512的一半\\\
+= \frac{53}{512} \times \frac{256}{256}\\\
+= \frac{53}{256} \times \frac{256}{512}\\\
+= \frac{53}{256} \times \frac{1}{2}\\\
+= ...\\\
+即,乘 \frac{1}{2}
+当算到了 \frac{21}{32}时,这样算\\\
+= \frac{16+4+1}{32}$
 
+**关于机器零**
+
++ 机器零有两种情况
+	- 尾数为0
+		+ 尾数为0,阶码无论多少,这个数都是0
+	- (尾数虽不为零),但是产生了下溢
+		+ 阶码小于或等于最小阶码,等于也算,,
++ 机器零的写法
+	- 尾数补码表示,阶码补码表示时,
+	机器零这么写:$1,000..0;0.000...0$
+	- 尾数补码表示,阶码移码表示时,
+	机器零这么写:$0,000...0;0.000...0$
+		+ 这种写法的机器零
+		是全零,有利于简化机器的判零电路
+####IEEE754
+![IEEE754][2]
 ###定点运算
 ###浮点四则运算
 ###算术逻辑单元
@@ -93,3 +121,4 @@ http://www.cskaoyan.com/thread-160179-1-1.html
 
 [0]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/floatpoint.gif
 [1]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/floatsample.gif
+[2]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/IEEE754.gif
