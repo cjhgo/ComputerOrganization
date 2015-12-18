@@ -6,6 +6,13 @@ viewport:width=device-width,initial-scale=1
 
 ##Ch6计算机的运算方法
 ###无符号数和有符号数
+###定点运算
+####移位运算
+#####算术移位:有符号数的移位
+#####逻辑移位:无符号数的移位
+####加法与减法运算
+####乘法运算
+####除法运算
 ###数的定点表示和浮点表示
 在计算机中,小数点不用专门的器件表示,而是按照约定的方式标出
 共有两种方法表示小数点的存在,即定点表示和浮点表示
@@ -64,7 +71,9 @@ j:阶码,决定了表示范围$$
 			这叫`上溢`
 			**产生上溢时机器停止运算,进行中断溢出处理**
 				+ 举例比如
+
 ![floatoverflow][3]				
+
 + 浮点数的规格化
 	- $尾数左移一位相当于乘了2,阶码部分要乘2^{-1}抵销,即\\\
 	尾数左移,阶码减一\\\
@@ -145,7 +154,7 @@ $178.125_{10}\\\
 
 ####浮点乘除法运算
 
-###定点运算
+
 
 ###算术逻辑单元
 
@@ -169,3 +178,4 @@ http://www.cskaoyan.com/thread-160179-1-1.html
 [1]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/floatsample.gif
 [2]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/IEEE754.gif
 [3]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/floatoverflow.gif
+[4]:http://cjhgo.sinaapp.com/CS/ComputerOrganization/images/shift.gif
